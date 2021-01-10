@@ -16,8 +16,7 @@ export class AppComponent {
   selectedDate = this.todaydate;
 
   habits = [
-    {'id':1 ,'title':'Read Books','status':1}, 
-    {'id':2 ,'title':'Workout','status':0},
+    
   ];
 
   public toggleHabitButton(id){
