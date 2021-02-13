@@ -1,0 +1,13 @@
+<div class="container">
+    <input type="text" placeholder="Add Habit" [(ngModel)]="habitText" (keydown.enter)="writeHabit($event)">
+
+    <div class="habit-container">
+        
+        <p *ngFor="let habit of habits" class="habit" >
+        {{habit.title}}
+        <button mat-icon-button (click)="removeHabit(habit.id)"><mat-icon>delete</mat-icon></button>
+        </p>
+        
+        
+    </div>
+</div>

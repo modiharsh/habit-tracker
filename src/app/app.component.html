@@ -1,32 +1,21 @@
 
 <mat-toolbar >
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
   </button>
+  
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/">Track Habits</button>
+      <button mat-menu-item routerLink="/add">Manage Habits</button>
+      
+    </mat-menu>
+
   <span>Habit Tracker</span>
 </mat-toolbar>
 
 
-<div class="container">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker" [formControl]="date" (dateChange)="dateChanged($event)">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker touchUi #picker></mat-datepicker>
-  </mat-form-field>
 
   
-  <input type="text" placeholder="Add Habit" (keydown.enter)="addHabit($event)">
+<router-outlet></router-outlet>
 
-  <div class="habit-container">
-    
-    <button *ngFor="let habit of habits" class="habit" mat-button (click)="toggleHabitButton(habit.id)"
-    [ngClass]="{'habit-completed': habit.status}">
-      {{habit.title}}
-      
-    </button>
-    
-    
-  </div>
 
-</div>
