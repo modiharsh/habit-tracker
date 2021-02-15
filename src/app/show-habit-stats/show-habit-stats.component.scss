@@ -1,0 +1,43 @@
+mat-form-field {
+    margin-right: 12px;
+  }
+
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.habit-container{
+    margin:30px;
+}
+
+.habit{
+    width: 36%;
+    min-width: 360px;
+    height: 40px;
+    border-radius: 7px;
+    padding: 2px 15px;
+    font-size: medium;
+    margin: 10px 10px;
+    background-color: salmon;
+    color: white;
+    align-items: center;
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.habit-completed{
+    background-color: seagreen;
+}
+
+
+
+.clear-button{
+    position: relative;
+    right: 2px;
+}

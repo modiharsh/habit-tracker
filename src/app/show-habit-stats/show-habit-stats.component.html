@@ -1,1 +1,12 @@
-<p>show-habit-stats works!</p>
+<div class="container">
+
+    <div class="habit-container">
+        
+        <p *ngFor="let habit of habits" class="habit" >
+            {{habit.title}}
+            <button mat-icon-button > {{habit.count}}</button>
+            </p>
+        
+        
+    </div>
+</div>
